@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Button</h1>
+<button kendoButton [icon]="'lock'" >Kendo UI Button</button> 
+<button kendoButton [primary]="true">Kendo UI Button</button>
+<button kendoButton [primary]="true" [disabled]="true">Kendo UI Button</button> 
+ 
+ <h1>Button Group</h1>
+ <kendo-buttongroup>
+    <button kendoButton>Button 1</button>
+    <button kendoButton [togglable]="true">Button 2</button>
+    <button kendoButton>Button 3</button>
+ </kendo-buttongroup>
+
+ <h1>Dropdown Buttons</h1>
+ <kendo-dropdownbutton [data]="dropDownData" (itemClick)="itemWasClicked($event)">Dropdown Button</kendo-dropdownbutton>
+
+<h1>Split Button</h1>
+<kendo-splitbutton (buttonClick)="buttonWasClicked()" (itemClick)="itemWasClicked($event)"  [data]="dropDownData">Split Button</kendo-splitbutton>
